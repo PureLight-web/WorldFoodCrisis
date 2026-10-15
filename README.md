@@ -1,43 +1,47 @@
 # World Food Crisis
 
-An evidence-led static website about food prices, crop production, supply chains and food security. Built for Cloudflare Pages using plain HTML, CSS and lightweight JavaScript. No Workers or build framework required.
+An evidence-led, fully static website about food prices, crop production, supply chains and food security. Built with Astro, HTML, CSS and lightweight JavaScript for GitHub + Cloudflare Pages. No Cloudflare Workers or server runtime is required.
 
-## Deploy on Cloudflare Pages
+## Local development
 
-1. In Cloudflare, open **Workers & Pages → Create → Pages → Connect to Git**.
-2. Select `PureLight-web/WorldFoodCrisis` and the `main` branch.
-3. Choose **None** for the framework preset.
-4. Leave the build command empty.
-5. Set the build output directory to `.` (repository root).
-6. Save and deploy. Subsequent commits to `main` trigger deployments when Git integration is enabled.
+Requirements: Node.js 22.12.0 or newer in the Node 22 line.
 
-All pages are static HTML under the repository root. There is no `functions/` directory, Worker entrypoint or build dependency.
+```sh
+npm install
+npm run dev
+```
 
-## Site map
+## Build and preview
 
-- `index.html` — homepage
-- `articles/` — editorial explainers
-- `data/` — key indicators and interpretation
-- `sources/` — primary-source directory
-- `tools/food-budget-impact/` — client-side scenario calculator
-- `about/`, `methodology/`, `privacy/`, `contact/` — trust and policy pages
-- `robots.txt`, `sitemap.xml` — crawl discovery
-- `assets/site.css`, `assets/main.js`, `assets/tools.js` — styles and lightweight interactions
+```sh
+npm run build
+npm run preview
+```
 
-## Before monetization or AdSense review
+Astro generates the complete static site in `dist/`.
 
-- Replace any starter privacy/contact language with accurate information about the real owner, contact method, hosting, analytics, cookies and advertising configuration.
-- Add a real, monitored editorial contact address and a transparent author/reviewer profile.
-- Review every article against its primary sources; confirm dates and all changing statistics immediately before publication.
-- Keep content original, useful and sufficiently detailed for the reader's intent. Do not mass-produce near-duplicate pages just to target keyword variants.
-- Add original charts, reporting, interviews or transparent calculations where they materially improve the article.
-- Check all internal links, mobile layouts, metadata, sitemap and production URL after the Cloudflare deployment.
-- The canonical URL currently points to `https://foodsupplycrisis.pages.dev/`. Update canonical and Open Graph URLs, sitemap and structured data if the production domain changes.
+## Cloudflare Pages settings
 
-## Editorial note
+Connect `PureLight-web/WorldFoodCrisis` to Cloudflare Pages and use:
 
-The FAO figures shown on the homepage are dated to the 2 October 2026 release. They should be checked and updated against the official release before each publication refresh. The Global Report on Food Crises figure refers to assessed food-crisis countries and territories, not a direct measurement of global food stocks.
+- **Framework preset:** Astro
+- **Production branch:** `main`
+- **Build command:** `npm run build`
+- **Build output directory:** `dist`
 
-## Local preview
+The repository includes a `.node-version` file so the build uses Node 22.12.0. This is a static Astro site; do not add the Cloudflare adapter and do not configure Workers.
 
-Because this is static, serve the repository root with any basic local static-file server. No compilation is required.
+## Project structure
+
+- `src/pages/` — static routes. Directory `index.astro` files preserve the site's trailing-slash URLs.
+- `public/assets/` — shared CSS and browser JavaScript, copied directly to the build output.
+- `public/robots.txt`, `public/sitemap.xml`, `public/_headers` — crawler guidance, sitemap and Cloudflare response headers.
+- `dist/` — generated site (not committed).
+
+## Publishing changes
+
+Commit page updates to `src/pages/` and assets to `public/`. When Cloudflare Pages is connected to the `main` branch, every successful push triggers a new build and deployment.
+
+## Editorial principles
+
+Prioritize original explanation, source links, dates and context. Distinguish global production from local access and affordability. Explain uncertainty, avoid sensational claims, and treat figures as time-sensitive when appropriate.
