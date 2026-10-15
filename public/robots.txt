@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://foodsupplycrisis.pages.dev/sitemap.xml
+Sitemap: https://worldfoodcrisis.pages.dev/sitemap.xml
