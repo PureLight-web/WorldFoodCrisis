@@ -1,4 +1,4 @@
-# Food Supply Crisis
+# World Food Crisis
 
 An evidence-led static website about food prices, crop production, supply chains and food security. Built for Cloudflare Pages using plain HTML, CSS and lightweight JavaScript. No Workers or build framework required.
 
