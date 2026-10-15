@@ -1,0 +1,6 @@
+(() => {
+const form=document.querySelector("#budget-form");if(!form)return;
+const money=(v,c)=>{try{return new Intl.NumberFormat("en",{style:"currency",currency:c,maximumFractionDigits:2}).format(v);}catch{return c+" "+Number(v).toFixed(2);}};
+const calculate=()=>{const c=document.querySelector("#currency").value,b=Number(document.querySelector("#basket").value),p=Number(document.querySelector("#change").value),annual=document.querySelector("#period").value==="annual",m=annual?12:1,delta=b*p/100*m,next=(b+b*p/100)*m,period=annual?" per year":" per month",dir=delta<0?" less":delta>0?" more":" extra";document.querySelector("#result-value").textContent=money(Math.abs(delta),c)+dir+period;document.querySelector("#result-copy").textContent="At a hypothetical "+p+"% change, the "+(annual?"annualized basket":"monthly basket")+" would be "+money(next,c)+". This assumes the entire basket changes by the same percentage.";};
+form.addEventListener("submit",e=>{e.preventDefault();calculate();});["currency","basket","change","period"].forEach(id=>document.getElementById(id).addEventListener("input",calculate));calculate();
+})();
