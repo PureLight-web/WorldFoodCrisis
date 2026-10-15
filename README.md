@@ -8,7 +8,7 @@ An evidence-led static website about food prices, crop production, supply chains
 2. Select `PureLight-web/WorldFoodCrisis` and the `main` branch.
 3. Choose **None** for the framework preset.
 4. Leave the build command empty.
-5. Set the build output directory to `/` (repository root, if accepted by the Pages setup).
+5. Set the build output directory to `.` (repository root).
 6. Save and deploy. Subsequent commits to `main` trigger deployments when Git integration is enabled.
 
 All pages are static HTML under the repository root. There is no `functions/` directory, Worker entrypoint or build dependency.
