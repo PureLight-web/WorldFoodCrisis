@@ -283,3 +283,37 @@ input,select,textarea,button{font:inherit}
 @media(max-width:990px){.latest-updates-grid,.country-hub-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.latest-updates-grid .latest-update-card:last-child{grid-column:1/-1}}
 @media(max-width:700px){.latest-updates-band{padding:32px 0 36px}.updates-heading{align-items:flex-start;flex-direction:column;gap:14px}.latest-updates-grid,.country-hub-grid{grid-template-columns:1fr}.latest-updates-grid .latest-update-card:last-child{grid-column:auto}.latest-update-card{grid-template-columns:56px minmax(0,1fr);padding:17px;gap:13px}.updates-footer{align-items:flex-start;flex-direction:column;gap:8px}.country-hub-card{min-height:0;padding:22px}.country-hub-method{margin-top:34px}.updates-stamp{white-space:normal}}
 @media(prefers-reduced-motion:reduce){.country-hub-card{transition:none!important}.country-hub-card:hover{transform:none}}
+
+
+/* Editorial thumbnail illustrations for cybersecurity, pantry planning and US grocery data */
+.latest-thumb-cyber{background:linear-gradient(145deg,#E8F0F0 0%,#C8DAD9 54%,#9CBDBA 100%)}
+.latest-thumb-cyber .thumb-fridge{position:absolute;z-index:2;left:28%;right:28%;top:13%;bottom:12%;border:5px solid #F8F5E9;border-radius:10px;background:linear-gradient(90deg,#D8E3DF,#F9F7ED 50%,#D8E3DF);box-shadow:0 10px 18px rgba(24,61,74,.15);display:block}
+.latest-thumb-cyber .thumb-fridge:before{content:"";position:absolute;top:0;bottom:0;left:50%;width:3px;background:#B7C8C3}
+.latest-thumb-cyber .thumb-fridge i,.latest-thumb-cyber .thumb-fridge b{position:absolute;top:29%;height:26%;width:3px;border-radius:4px;background:#6D8E8D}
+.latest-thumb-cyber .thumb-fridge i{left:43%}
+.latest-thumb-cyber .thumb-fridge b{right:43%}
+.latest-thumb-cyber .thumb-fridge em{position:absolute;left:13%;right:13%;bottom:15%;height:18%;border-radius:3px;background:repeating-linear-gradient(90deg,#B7D0C6 0 9px,#DBE8E0 9px 14px)}
+.latest-thumb-cyber .thumb-alert{position:absolute;z-index:3;right:22%;top:25%;width:31px;height:31px;border-radius:50%;background:#C65D49;border:4px solid rgba(255,249,237,.9);box-shadow:0 0 0 7px rgba(198,93,73,.15)}
+.latest-thumb-cyber .thumb-alert:before{content:"!";position:absolute;inset:0;display:grid;place-items:center;color:#fff;font-size:18px;font-weight:900}
+.latest-thumb-pantry{background:linear-gradient(145deg,#F5ECD9,#E8D1B0)}
+.latest-thumb-pantry .thumb-pantry-shelf{position:absolute;z-index:1;left:12%;right:12%;height:8px;border-radius:3px;background:linear-gradient(#A96B43,#855135);box-shadow:0 7px 0 rgba(110,66,41,.12)}
+.latest-thumb-pantry .shelf-one{top:41%}
+.latest-thumb-pantry .shelf-two{top:69%}
+.latest-thumb-pantry .thumb-can{position:absolute;z-index:2;bottom:31%;width:13%;height:26%;border-radius:4px 4px 5px 5px;border-top:5px solid #CCD9CF;background:linear-gradient(90deg,#6A9C8B,#BBD7BD 53%,#5B8B7C);box-shadow:0 4px 5px rgba(83,61,36,.13)}
+.latest-thumb-pantry .can-one{left:21%}
+.latest-thumb-pantry .can-two{left:40%;height:22%;background:linear-gradient(90deg,#D78A62,#F0C58A 53%,#BA714B)}
+.latest-thumb-pantry .can-three{left:60%;height:25%;background:linear-gradient(90deg,#B77D52,#E9C67D 53%,#A56A45)}
+.latest-thumb-pantry .thumb-jar{position:absolute;z-index:2;bottom:58%;width:14%;height:18%;border-radius:5px 5px 3px 3px;border-top:5px solid #A36B46;background:linear-gradient(90deg,rgba(110,150,121,.75),rgba(219,225,159,.85) 52%,rgba(91,131,106,.75));box-shadow:0 4px 5px rgba(83,61,36,.12)}
+.latest-thumb-pantry .jar-one{left:29%}
+.latest-thumb-pantry .jar-two{left:55%;background:linear-gradient(90deg,rgba(183,104,71,.78),rgba(232,192,119,.92) 52%,rgba(160,94,58,.78))}
+.latest-thumb-us{background:linear-gradient(170deg,#E9F0ED 0%,#D8E6E0 45%,#C4D8CD 45%,#E3E3CF 100%)}
+.latest-thumb-us .thumb-store-shelf{position:absolute;z-index:1;left:9%;right:9%;height:12%;border-radius:4px;background:linear-gradient(180deg,#B5C9BE,#839F93);box-shadow:0 7px 0 rgba(40,72,60,.1)}
+.latest-thumb-us .shelf-top{top:34%}
+.latest-thumb-us .shelf-bottom{top:65%}
+.latest-thumb-us .thumb-grocery{position:absolute;z-index:2;bottom:54%;height:19%;width:13%;border-radius:4px 4px 2px 2px;background:#E6BB6C;border:2px solid rgba(255,255,255,.6);box-shadow:0 3px 5px rgba(36,62,50,.12)}
+.latest-thumb-us .item-one{left:17%;background:linear-gradient(90deg,#D6A261,#F5D795,#BE884F)}
+.latest-thumb-us .item-two{left:34%;height:24%;background:linear-gradient(90deg,#C86D51,#EBA07A,#9F4E42)}
+.latest-thumb-us .item-three{left:54%;background:linear-gradient(90deg,#6A9880,#A8C9A3,#4C7D66)}
+.latest-thumb-us .item-four{left:72%;height:22%;background:linear-gradient(90deg,#8D98A7,#D9E0D9,#78899A)}
+.latest-thumb-us .thumb-grocery:after{content:"";position:absolute;left:4px;right:4px;top:35%;height:3px;background:rgba(255,255,255,.72)}
+@media(max-width:620px){.latest-thumb-cyber .thumb-fridge{left:29%;right:29%}.latest-thumb-cyber .thumb-alert{right:19%}}
