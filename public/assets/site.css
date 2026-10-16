@@ -898,3 +898,8 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 .feature-art img{display:block;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
 .feature-art .art-label{z-index:2;text-shadow:0 1px 4px rgba(0,0,0,.4)}
 .feature-art:after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,rgba(13,43,48,.30),transparent 42%,rgba(13,43,48,.08))}
+
+/* All-articles archive page heading */
+.article-archive-heading{max-width:900px;padding:10px 0 8px}
+.article-archive-heading .article-title{max-width:880px}
+.article-archive-heading .article-dek{max-width:760px}
