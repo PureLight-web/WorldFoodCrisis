@@ -3,7 +3,7 @@ import type { APIRoute } from 'astro';
 // Canonical public routes listed in one place so the XML stays consistent.
 // Add each new indexable route here when publishing a page.
 const siteUrl = 'https://worldfoodcrisis.pages.dev';
-const lastModified = '2026-10-15';
+const lastModified = '2026-10-16';
 const paths = [
   "/",
   "/about/",
@@ -13,6 +13,7 @@ const paths = [
   "/sources/",
   "/data/",
   "/tools/food-budget-impact/",
+  "/articles/",
   "/articles/food-prices-vs-shortages/",
   "/articles/global-cereal-outlook-2026/",
   "/articles/fertilizer-and-food-supply/",
