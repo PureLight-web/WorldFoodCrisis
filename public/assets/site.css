@@ -885,10 +885,3 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
   .feature-card,.latest-article-card,.metric-card,.latest-update-card{transition:none!important}
   .feature-card:hover,.latest-article-card:hover,.metric-card:hover,.latest-update-card:hover{transform:none}
 }
-
-
-/* Article featured images: descriptive, indexable HTML image elements. */
-.article-featured-image{width:100%;margin:0 0 2rem;overflow:hidden;border:1px solid #dfe4db;border-radius:18px;background:#f0f2e9;box-shadow:0 14px 34px rgba(21,44,39,.08)}
-.article-featured-image img{display:block;width:100%;height:auto;aspect-ratio:1200/630;object-fit:cover}
-.article-featured-image figcaption{padding:.7rem 1rem .85rem;color:#65736c;font-size:.82rem;line-height:1.5}
-@media(max-width:700px){.article-featured-image{margin-bottom:1.4rem;border-radius:13px}.article-featured-image figcaption{font-size:.78rem;padding:.6rem .8rem .75rem}}
