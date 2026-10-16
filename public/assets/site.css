@@ -903,3 +903,10 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 .article-archive-heading{max-width:900px;padding:10px 0 8px}
 .article-archive-heading .article-title{max-width:880px}
 .article-archive-heading .article-dek{max-width:760px}
+
+
+/* Consistent, uncropped-by-stretching featured thumbnails across article and country cards */
+.country-hub-thumb{display:block;width:100%;max-width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;object-position:center;border-radius:12px;margin:0 0 18px;flex:0 0 auto}
+.latest-thumb img,.feature-art img,.country-hub-thumb,.article-featured-image img{object-fit:cover;object-position:center}
+.latest-thumb img{width:100%;height:100%}
+@media(max-width:700px){.country-hub-thumb{aspect-ratio:16/9;border-radius:10px;margin-bottom:15px}}
