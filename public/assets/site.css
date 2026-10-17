@@ -912,7 +912,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 @media(max-width:700px){.country-hub-thumb{aspect-ratio:16/9;border-radius:10px;margin-bottom:15px}}
 
 
-//* Preserve each uploaded thumbnail's native aspect ratio: landscape stays landscape, portrait stays fully vertical */
+/* Preserve each uploaded thumbnail's native aspect ratio: landscape stays landscape, portrait stays fully vertical */
 .latest-thumb {
   height: auto !important;
   min-height: 0 !important;
