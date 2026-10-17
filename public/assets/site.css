@@ -968,6 +968,6 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 .commodity-chart-track{position:relative;height:15px;overflow:visible;border-radius:3px;background:linear-gradient(to right,transparent 21.8%,#9ca99d 21.8%,#9ca99d 22.6%,transparent 22.6%),#edf0e8}
 .commodity-chart-bar{position:absolute;top:2px;bottom:2px;display:block;background:#3d8068;border-radius:0 3px 3px 0}
 .commodity-chart-bar.negative{background:#bf8a3d;border-radius:3px 0 0 3px}
-.commodity-chart-zero{display:flex;justify-content:space-between;margin:13px 70px 0 0;padding-left:calc(22.2% + 4px);font-size:.68rem;color:#68776e}
-@media(max-width:620px){.commodity-chart{padding:15px}.commodity-chart-row{grid-template-columns:minmax(92px,1fr) minmax(65px,1.15fr) 46px;gap:7px;font-size:.68rem}.commodity-chart-row>strong{font-size:.7rem}.commodity-chart-zero{margin-right:54px;padding-left:22.2%;font-size:.6rem}.commodity-chart-note{font-size:.73rem}}
+.commodity-chart-row-axis{margin-top:13px;align-items:start;color:#68776e;font-size:.68rem}.commodity-chart-axis{position:relative;height:13px;display:block;grid-column:2}.commodity-chart-axis span{position:absolute;top:0;white-space:nowrap}.commodity-chart-axis span:first-child{left:0}.commodity-chart-axis span:nth-child(2){left:22.22%;transform:translateX(-50%)}.commodity-chart-axis span:last-child{right:0}
+@media(max-width:620px){.commodity-chart{padding:15px}.commodity-chart-row{grid-template-columns:minmax(92px,1fr) minmax(65px,1.15fr) 46px;gap:7px;font-size:.68rem}.commodity-chart-row>strong{font-size:.7rem}.commodity-chart-row-axis{margin-top:10px;font-size:.6rem}.commodity-chart-axis{height:11px}.commodity-chart-axis span:nth-child(2){left:22.22%}.commodity-chart-note{font-size:.73rem}}
 
