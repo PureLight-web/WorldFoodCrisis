@@ -956,3 +956,18 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
   object-position: center center !important;
   background-color: #f5f4ed;
 }
+
+/* Original editorial chart: FAO monthly commodity-price changes */
+.commodity-chart{margin:24px 0 28px;padding:20px;border:1px solid var(--line);border-radius:12px;background:#fffdf8;max-width:100%}
+.commodity-chart figcaption{font-family:var(--serif);font-size:1.25rem;line-height:1.25;color:var(--ink);margin:0 0 8px}
+.commodity-chart-note{font-size:.78rem;line-height:1.55;color:var(--muted);margin:0 0 17px}
+.commodity-chart-list{display:grid;gap:10px}
+.commodity-chart-row{display:grid;grid-template-columns:minmax(125px,1fr) minmax(120px,2fr) 58px;align-items:center;gap:12px;font-size:.78rem;color:var(--ink)}
+.commodity-chart-row>span{line-height:1.25}
+.commodity-chart-row>strong{text-align:right;font-variant-numeric:tabular-nums;font-size:.8rem}
+.commodity-chart-track{position:relative;height:15px;overflow:visible;border-radius:3px;background:linear-gradient(to right,transparent 21.8%,#9ca99d 21.8%,#9ca99d 22.6%,transparent 22.6%),#edf0e8}
+.commodity-chart-bar{position:absolute;top:2px;bottom:2px;display:block;background:#3d8068;border-radius:0 3px 3px 0}
+.commodity-chart-bar.negative{background:#bf8a3d;border-radius:3px 0 0 3px}
+.commodity-chart-zero{display:flex;justify-content:space-between;margin:13px 70px 0 0;padding-left:calc(22.2% + 4px);font-size:.68rem;color:#68776e}
+@media(max-width:620px){.commodity-chart{padding:15px}.commodity-chart-row{grid-template-columns:minmax(92px,1fr) minmax(65px,1.15fr) 46px;gap:7px;font-size:.68rem}.commodity-chart-row>strong{font-size:.7rem}.commodity-chart-zero{margin-right:54px;padding-left:22.2%;font-size:.6rem}.commodity-chart-note{font-size:.73rem}}
+
