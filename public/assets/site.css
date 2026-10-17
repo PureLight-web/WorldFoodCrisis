@@ -912,55 +912,47 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 @media(max-width:700px){.country-hub-thumb{aspect-ratio:16/9;border-radius:10px;margin-bottom:15px}}
 
 
-/* Vertical thumbnail frames: stretch each complete image to fill the frame without cropping */
+/* Preserve each uploaded thumbnail's native aspect ratio: landscape stays landscape, portrait stays fully vertical */
 .latest-thumb {
-  display: block;
-  position: relative;
-  overflow: hidden;
-  width: 100%;
   height: auto !important;
   min-height: 0 !important;
-  aspect-ratio: 3 / 4 !important;
+  aspect-ratio: auto !important;
   background-color: #f5f4ed;
 }
 .latest-thumb img {
-  position: absolute !important;
-  inset: 0 !important;
+  position: relative !important;
+  inset: auto !important;
   display: block;
   width: 100% !important;
-  height: 100% !important;
+  height: auto !important;
   max-height: none !important;
-  object-fit: fill !important;
+  object-fit: contain !important;
   object-position: center center !important;
   background-color: #f5f4ed;
 }
 .feature-art {
-  position: relative;
-  width: 100%;
   height: auto !important;
   min-height: 0 !important;
-  aspect-ratio: 3 / 4 !important;
-  overflow: hidden;
+  aspect-ratio: auto !important;
   background-color: #f5f4ed;
 }
 .feature-art img {
-  position: absolute !important;
-  inset: 0 !important;
+  position: relative !important;
+  inset: auto !important;
   display: block;
   width: 100% !important;
-  height: 100% !important;
+  height: auto !important;
   max-height: none !important;
-  object-fit: fill !important;
+  object-fit: contain !important;
   object-position: center center !important;
   background-color: #f5f4ed;
 }
 .country-hub-thumb {
-  display: block;
   width: 100% !important;
   max-width: 100% !important;
   height: auto !important;
-  aspect-ratio: 3 / 4 !important;
-  object-fit: fill !important;
+  aspect-ratio: auto !important;
+  object-fit: contain !important;
   object-position: center center !important;
   background-color: #f5f4ed;
 }
