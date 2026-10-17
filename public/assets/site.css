@@ -910,3 +910,13 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 .latest-thumb img,.feature-art img,.country-hub-thumb,.article-featured-image img{object-fit:cover;object-position:center}
 .latest-thumb img{width:100%;height:100%}
 @media(max-width:700px){.country-hub-thumb{aspect-ratio:16/9;border-radius:10px;margin-bottom:15px}}
+
+
+/* Show the complete featured image in every thumbnail; never crop or zoom */
+.latest-thumb img,
+.feature-art img,
+.country-hub-thumb {
+  object-fit: contain !important;
+  object-position: center center !important;
+  background-color: #f5f4ed;
+}
