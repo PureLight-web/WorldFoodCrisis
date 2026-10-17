@@ -912,10 +912,46 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 @media(max-width:700px){.country-hub-thumb{aspect-ratio:16/9;border-radius:10px;margin-bottom:15px}}
 
 
-/* Show the complete featured image in every thumbnail; never crop or zoom */
-.latest-thumb img,
-.feature-art img,
+//* Preserve each uploaded thumbnail's native aspect ratio: landscape stays landscape, portrait stays fully vertical */
+.latest-thumb {
+  height: auto !important;
+  min-height: 0 !important;
+  aspect-ratio: auto !important;
+  background-color: #f5f4ed;
+}
+.latest-thumb img {
+  position: relative !important;
+  inset: auto !important;
+  display: block;
+  width: 100% !important;
+  height: auto !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+  background-color: #f5f4ed;
+}
+.feature-art {
+  height: auto !important;
+  min-height: 0 !important;
+  aspect-ratio: auto !important;
+  background-color: #f5f4ed;
+}
+.feature-art img {
+  position: relative !important;
+  inset: auto !important;
+  display: block;
+  width: 100% !important;
+  height: auto !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+  background-color: #f5f4ed;
+}
 .country-hub-thumb {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  aspect-ratio: auto !important;
   object-fit: contain !important;
   object-position: center center !important;
   background-color: #f5f4ed;
