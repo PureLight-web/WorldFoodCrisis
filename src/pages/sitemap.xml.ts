@@ -3,7 +3,19 @@ import type { APIRoute } from 'astro';
 // Canonical public routes listed in one place so the XML stays consistent.
 // Add each new indexable route here when publishing a page.
 const siteUrl = 'https://worldfoodcrisis.pages.dev';
-const lastModified = '2026-10-16';
+const defaultLastModified = '2026-10-16';
+const lastModifiedByPath: Record<string, string> = {
+  "/": "2026-10-17",
+  "/data/": "2026-10-17",
+  "/articles/food-prices-vs-shortages/": "2026-10-17",
+  "/food-crisis-by-country/india/": "2026-10-17",
+  "/food-crisis-by-country/australia/": "2026-10-17",
+  "/food-crisis-by-country/canada/": "2026-10-17",
+  "/food-crisis-by-country/united-kingdom/": "2026-10-17",
+  "/food-crisis-by-country/united-states/": "2026-10-17",
+  "/privacy/": "2026-10-17",
+  "/contact/": "2026-10-17",
+};
 const paths = [
   "/",
   "/about/",
@@ -49,7 +61,10 @@ const escapeXml = (value: string) => value
 const xml = [
   '<?xml version="1.0" encoding="UTF-8"?>',
   '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
-  ...paths.map((path) => '  <url>\n    <loc>' + escapeXml(new URL(path, siteUrl).href) + '</loc>\n    <lastmod>' + lastModified + '</lastmod>\n  </url>'),
+  ...paths.map((path) => {
+    const lastmod = lastModifiedByPath[path] ?? defaultLastModified;
+    return '  <url>\n    <loc>' + escapeXml(new URL(path, siteUrl).href) + '</loc>\n    <lastmod>' + lastmod + '</lastmod>\n  </url>';
+  }),
   '</urlset>',
 ].join('\n') + '\n';
 
