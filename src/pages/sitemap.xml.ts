@@ -3,9 +3,8 @@ import type { APIRoute } from 'astro';
 // Canonical public routes listed in one place so the XML stays consistent.
 // Add each new indexable route here when publishing a page.
 const siteUrl = 'https://worldfoodcrisis.pages.dev';
-const defaultLastModified = '2026-10-16';
 const lastModifiedByPath: Record<string, string> = {
-  "/": "2026-10-17",
+  "/": "2026-10-28",
   "/data/": "2026-10-17",
   "/articles/food-prices-vs-shortages/": "2026-10-17",
   "/food-crisis-by-country/india/": "2026-10-17",
@@ -62,8 +61,8 @@ const xml = [
   '<?xml version="1.0" encoding="UTF-8"?>',
   '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
   ...paths.map((path) => {
-    const lastmod = lastModifiedByPath[path] ?? defaultLastModified;
-    return '  <url>\n    <loc>' + escapeXml(new URL(path, siteUrl).href) + '</loc>\n    <lastmod>' + lastmod + '</lastmod>\n  </url>';
+    const lastmod = lastModifiedByPath[path];
+    return '  <url>\n    <loc>' + escapeXml(new URL(path, siteUrl).href) + '</loc>' + (lastmod ? '\n    <lastmod>' + lastmod + '</lastmod>' : '') + '\n  </url>';
   }),
   '</urlset>',
 ].join('\n') + '\n';
